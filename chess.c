@@ -35,56 +35,56 @@ void startpoz (Cells cell[] ) {
 	cell[i].col = 3;
     }
     cell[8].name = R;	
-	cell[8].col = BL;
+    cell[8].col = BL;
 
     cell[16].name = N;	
-	cell[16].col = BL;
+    cell[16].col = BL;
 
     cell[24].name = B;	
-	cell[24].col = BL;
+    cell[24].col = BL;
 
     cell[32].name = Q;	
-	cell[32].col = BL;
+    cell[32].col = BL;
 
     cell[40].name = K;	
-	cell[40].col = BL;
+    cell[40].col = BL;
 
     cell[48].name = B;	
-	cell[48].col = BL;
+    cell[48].col = BL;
 
     cell[56].name = N;	
-	cell[56].col = BL;
+    cell[56].col = BL;
 
     cell[64].name = R;	
-	cell[64].col = BL;
-    for (i = 7; i <= 7+(7*8); i+= 8) {
+    cell[64].col = BL;
+    for (i = 7; i <= 7 + (7 * 8); i += 8) {
 	cell[i].name = P;
 	cell[i].col = BL;
     }
     cell[1].name = R;	
-	cell[1].col = WH;
+    cell[1].col = WH;
 
     cell[9].name = N;	
-	cell[9].col = WH;
+    cell[9].col = WH;
 
     cell[17].name = B;	
-	cell[17].col = WH;
+    cell[17].col = WH;
 
     cell[25].name = Q;	
-	cell[25].col = WH;
+    cell[25].col = WH;
 
     cell[33].name = K;	
-	cell[33].col = WH;
+    cell[33].col = WH;
 
     cell[41].name = B;	
-	cell[41].col = WH;
+    cell[41].col = WH;
 
     cell[49].name = N;	
-	cell[49].col = WH;
+    cell[49].col = WH;
 
     cell[57].name = R;	
-	cell[57].col = WH;
-    for (i = 2; i <= 2+(7*8); i+= 8) {
+    cell[57].col = WH;
+    for (i = 2; i <= 2 + (7 * 8); i += 8) {
 	cell[i].name = P;
 	cell[i].col = WH;
     }
@@ -101,7 +101,7 @@ void drbo (Cells cell[] ) {
     
     for (i = 8; i >= 1; --i) {
 	printf ("\n   | ");
-	for (j = i; j < i+(8*7)+1;j+= 8) {
+	for (j = i; j < i + (8 * 7) + 1;j += 8) {
 	    switch (cell[j].col) {
 		case WH: 
 		    printf ("%s",BLUE); 
@@ -136,7 +136,7 @@ void drbo (Cells cell[] ) {
 //					printf (" ");
 		    break;
 		}
-	    } else {if (cell[j].col == BL) {
+	    } else { if (cell[j].col == BL) {
 		    switch (cell[j].name) {
 		    case R:
 			printf ("%c",'r');
@@ -162,10 +162,10 @@ void drbo (Cells cell[] ) {
             }
         } else { 
             printf (" ");
-        }
-        }
+    	}
+    }
         
-        if ( j != i+(8*7) ) {
+        if ( j != i + (8 * 7) ) {
         printf ("\033[0m");
         printf (" | ");
         }
